@@ -1,24 +1,17 @@
-import React, {
-    Suspense,
-    Component
-} from 'react';
+import React, {Suspense, Component} from 'react';
 
 import {
-    BrowserRouter as Router,
-    Route,
-    Link,
+    BrowserRouter as Router, Route, Link,
     // Switch,
     // Redirect,
     // withRouter,
     // Prompt,
     // StaticRouter
 } from "react-router-dom";
+// import Button from 'antd/lib/button';
+import {Button} from 'antd';
 
-import './App.css';
-
-import Footer from './components/Footer'
-import AddTodo from './containers/AddTodo'
-import VisibleTodoList from './containers/VisibleTodoList'
+import './App.less';
 
 const Other = React.lazy(() => import('./pages/test/other'));
 
@@ -38,14 +31,11 @@ const Other = React.lazy(() => import('./pages/test/other'));
 //     }
 // }
 
-console.log(VisibleTodoList, 111);
 
 const App = () => (
     <div>
-        <AddTodo />
-        <VisibleTodoList />
-        <Footer />
+        <Button type="primary">123</Button>
     </div>
-)
+);
 
 export default App;
